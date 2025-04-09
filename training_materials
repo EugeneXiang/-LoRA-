@@ -1,19 +1,20 @@
-### 📚 训练语料（中文）
+## 📚 训练语料（中文）
 
 言犀目前使用的训练语料来源较为多元，包含开源指令数据与部分定制化内容，主要包括：
 
-✅ 当前已使用数据集：
-	•	belle_open_source.json
-	•	alpaca_data_zh_51k.json
-	•	个人语料.txt（包含用户自定义角色对话样本）
+### ✅ 当前已使用数据集：
 
-✅ 远程加载数据：
-	•	tatsu-lab/alpaca_data_zh（可通过 Hugging Face datasets 直接调用）
+- `belle_open_source.json`  
+- `alpaca_data_zh_51k.json`  
+- `个人语料.txt`（用户私有语料，已脱敏处理）
 
-🧪 后续计划评估数据：
-	•	YeungNLP/firefly-train-1.1M
-	•	BAAI/COIG
+### ✅ 远程加载数据：
 
-若有需要，可前往对应 GitHub / Hugging Face 仓库下载数据集，或联系本人获取定制语料样本与预处理建议。
+- `tatsu-lab/alpaca_data_zh`（可通过 Hugging Face `datasets` 直接调用）
 
-本项目鼓励多样化语料微调，以探索中文 LLM 在人格表现、情绪回应和多轮对话中的调控潜力。
+### 🧪 后续计划评估数据：
+
+- `YeungNLP/firefly-train-1.1M`  
+- `BAAI/COIG`
+
+> 若有需要，可前往对应 GitHub / Hugging Face 仓库下载数据集，或联系本人获取定制语料样本与预处理建议。
