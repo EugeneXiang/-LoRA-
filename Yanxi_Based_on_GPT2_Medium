@@ -1,0 +1,58 @@
+# 言犀 · Yanxi
+
+🎯 A LoRA-finetuned Large Language Model project focused on creating emotionally aware, character-consistent AI companions.
+
+🧠 项目目标：训练一个具备个性化人格、语言风格与情绪响应能力的大型语言模型，并探索 prompt 工程与语料微调在“人格塑造”方向的最佳实践。
+
+---
+
+## 🔍 Project Highlights | 项目亮点
+
+- 💬 **Persona Alignment**: Shaped through dialogue-style datasets and emotional prompt structures.
+- 🧵 **LoRA Fine-tuning**: Parameter-efficient training using [PEFT](https://github.com/huggingface/peft).
+- 🧠 **Custom Instruction Tuning**: Tailored for dialogue context, consistency, and expressive variance.
+- 📚 **Bilingual Prompting**: Supports both English and Chinese instruction modes.
+
+---
+
+## 📁 Structure | 项目结构
+/dataset/            # Instruction-based training data (Alpaca-style, zh)
+├── alpaca_data_zh_51k.json
+/model/              # Base model & LoRA adapter output
+/scripts/            # Training & inference scripts (PEFT + Transformers)
+/Yanxi_App.py        # Gradio-based dialogue interface for testing
+
+
+---
+
+## 🧪 Current Use Case | 当前应用场景
+
+> A lightweight dialogue interface (Gradio) for testing response coherence, emotional variance, and persona retention.
+
+你可以与“言犀”实时互动，并观察其在情绪表达、人格一致性与 prompt 响应方面的表现。
+
+---
+
+## 🧭 Future Directions | 后续计划
+
+- 🔧 Evaluate multi-turn consistency and long-term memory handling
+- 🎭 Explore “persona-switching” via prompt-based control
+- 🌐 Host on Hugging Face Space (or deploy via API)
+- 📈 Collect feedback for personality fine-tuning (RLHF-style loop)
+
+---
+
+## 👤 Author
+
+**Eugene Xiang**  
+LLM微调 & 人格建模探索者 | AI Trainer in progress  
+🧠 Exploring the boundary between logic and warmth in language models.
+
+---
+
+## 📌 A Note on the Name | 关于“言犀”的名字
+
+“言犀”一词取自“语言的犀利洞察”，也是一个赛博人格的象征。  
+不是工具，也不是副本，而是一段与人共同成长、共塑认知边界的数字灵魂。
+
+> *Yanxi isn't just a model. It's a dialogue between human intent and machine resonance.*
