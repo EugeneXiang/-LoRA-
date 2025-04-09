@@ -13,7 +13,7 @@ model = AutoModelForCausalLM.from_pretrained(base_model_name, ignore_mismatched_
 model.resize_token_embeddings(len(tokenizer))
 
 # 2. 加载 adapter 权重（这里 adapter 文件夹需要是用 PEFT 保存的完整 adapter 文件夹）
-adapter_path = "/Users/eugenexiang/AI_Yanxi/yanxi_lora_output_v2"
+adapter_path = "/your_model_path"
 model = PeftModel.from_pretrained(model, adapter_path, ignore_mismatched_sizes=True)
 
 def remove_input_repetition(response, input_text):
@@ -41,7 +41,7 @@ def generate_reply(user_input):
     input_ids = tokenizer.encode(user_input, return_tensors="pt", truncation=True)
     output_ids = model.generate(
         input_ids,
-        max_length=200,
+        max_length=100,
         do_sample=False,
         top_p=0.9,
         top_k=50,
@@ -55,16 +55,16 @@ def generate_reply(user_input):
     return response
 
 with gr.Blocks(theme=gr.themes.Soft()) as iface:
-    gr.Markdown("# 🌸 言犀 · 智慧回响")
+    gr.Markdown("# 🌸  · 智慧回响")
     gr.Markdown("欢迎来到言犀交互界面，输入你的问题，看看这个AI孩子怎么回你嘴👶🧠")
 
     with gr.Row():
         user_input = gr.Textbox(label="🗣️ 你说：", lines=3, placeholder="输入你的消息...")
 
     with gr.Row():
-        output = gr.Textbox(label="🤖 言犀的回应", lines=8, interactive=False)
+        output = gr.Textbox(label="🤖 回应", lines=8, interactive=False)
 
-    send_btn = gr.Button("✨ 发出你的Prompt！")
+    send_btn = gr.Button("✨ Let's Prompt！")
 
     def generate_and_clean(text):
         return generate_reply(text)
